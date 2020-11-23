@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<main>
+    <div class="container wow fadeIn">
+        <h2 class="my-5 h2 text-center">Inquiry form</h2>
+        <div class="card">
+            <form method="POST" class="card-body">
+                {% csrf_token %}
+                <h3>Inquiry Details</h3>
+                <div class="md-form mb-5">
+                    <input type="text" , placeholder="+255719097737" id="phone_number" name="phone_number"
+                        class="form-control" />
+                    <label for="phone_number">Phone Number</label>
+                </div>
+                <div class="md-form mb-5">
+                    <input type="text" , placeholder="example@gmail.com" id="email" name="email" class="form-control" />
+                    <label for="phone_number">Email</label>
+                </div>
+                <div class="md-form mb-5">
+                    <input type="text" , placeholder="John Doe" id="name" name="name" class="form-control" />
+                    <label for="phone_number">Name</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock content %}

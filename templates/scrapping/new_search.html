@@ -1,0 +1,34 @@
+{% extends 'scrapbase.html'%}
+{%  block contents %}
+
+{% for post in final_listings %}
+<div class="jumbotron jumbotron-fluid mt-0 mb-0">
+    <div class="container  mb-0 mt-0 ml-0">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card mb-0 mt-0 ml-0">
+
+                    <!-- Card image -->
+                    <div class="view overlay  mb-0 mt-0 ml-0">
+                        <img class="card-img-top" src="{{post.3}}" alt="{{post.0}}">
+                        <a href="{% url 'car_details' post.1 %}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body  mb-0 mt-0 ml-0">
+
+                        <!-- Title -->
+                        <h4 class="card-title">{{post.0}}</h4>
+                        <!-- Text -->
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-8"></div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock  %}
